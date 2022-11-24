@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Password - Hào đẹp trai</title>
+    <link rel="shortcut icon" href="./zalo.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 15px;
+        }
+        
+        div {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+        }
+        
+        div::-webkit-scrollbar {
+            display: none;
+        }
+        
+        div>* {
+            scroll-snap-align: start;
+            display: block;
+            width: 60px;
+            font-size: 60px;
+            padding: .5em;
+            margin-bottom: .5em;
+            border: medium solid #000;
+        }
+        
+        div>*:hover {
+            cursor: help;
+            background: #000;
+            color: #fff;
+        }
+        
+        div>*:active {
+            cursor: pointer;
+        }
+        
+        div>*:not(:last-child) {
+            margin-right: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Sử dụng được</h2>
+    <div>
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-facebook-circle'></i>
+    </div>
+    <div>
+        <i class="bx bxl-google"></i>
+        <i class="bx bxl-google"></i>
+        <i class="bx bxl-google"></i>
+        <i class="bx bxl-google"></i>
+        <i class="bx bxl-google"></i>
+    </div>
+    <div>
+        <i class="bx bxl-github"></i>
+    </div>
+    <div>
+        <i class='bx bxl-wordpress'></i>
+    </div>
+    <div>
+        <img src="./zalo.png" alt="">
+        <img src="./zalo.png" alt="">
+    </div>
+    <div>
+        <img src="./vietinbank.png" alt="">
+    </div>
+    <h2>Không sử dụng được</h2>
+    <div>
+        <i class='bx bxl-tiktok'></i>
+    </div>
+    <div>
+        <i class='bx bxl-instagram-alt'></i>
+    </div>
+    <div>
+        <i class='bx bxl-twitter'></i>
+    </div>
+    <div>
+        <i class='bx bxl-telegram'></i>
+    </div>
+
+    <script>
+        const dd = document.querySelectorAll('div>*')
+
+        const pass = [
+            // Facebook: wind > hafo > 176(none)
+            'b^icnq2t$*vF',
+            'O6`lM6gLR@Bo',
+            'II%uMuHe9m$6',
+            // Google: wind > hafo > 9x > 001 > 176
+            '^50d&^xuGz*L',
+            'ip^P~D%V#@mr0710',
+            '95E125973',
+            'wordwearyw0w',
+            'okvothan511',
+            // Github: hafo
+            'In*7o!`GzaeV',
+            // Wordpress.com: hafo
+            '$QLtcFpiS8)F',
+            // Zalo: 08 > 03
+            'lpqo6iCKY$&8',
+            '^Wy7m^0PF3aD',
+            // VietinBank
+            'x)9$adnP8#*c'
+        ]
+
+        dd.forEach((d, i) => {
+            d.onclick = function() {
+                navigator.clipboard.writeText(pass[i]);
+            }
+        })
+    </script>
+</body>
+
+</html>
